@@ -2,7 +2,7 @@ import React from 'react'
 
 const BigSideBar = () => {
   return (
-    <div>BigSideBar</div>
+    <div style={{ color: 'white', marginTop: 200, fontSize: 200 }}>BigSideBar</div>
   )
 }
 

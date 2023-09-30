@@ -10,9 +10,9 @@ import useWindowSize from '../../helpers/useWindowSize'
 
 const NavigationBar = () => {
 
-  const { width } = useWindowSize
+  const { width } = useWindowSize();
   const { showSpecialSearchBar, setShowSpecialSearchBar } = useContext(SearchContext);
-
+  
   const specialSearchBarRender = (
     <div className='special_searchbar'>
       <button onClick={() => setShowSpecialSearchBar(false)}>

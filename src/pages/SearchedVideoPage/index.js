@@ -1,9 +1,9 @@
 import React from 'react'
 
-const SearchedVideoPage = () => {
+const SearchedVideosPage = () => {
   return (
-    <div>SearchedVideoPage</div>
+    <div>SearchedVideosPage</div>
   )
 }
 
-export default SearchedVideoPage
+export default SearchedVideosPage

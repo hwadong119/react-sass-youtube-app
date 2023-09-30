@@ -101,10 +101,10 @@ const BigSideBar = () => {
             backgroundColor: "black",
             effect: "solid",
             delayShow: 300,
-            arrowColor: "transparent",
-            place:"bottom",
             offset: { top: 0, left: 0 }
           }}
+          arrowColor="transparent"
+          place="bottom"
           className="tooltip"
         />
       </div>

@@ -23,8 +23,8 @@ const RightNav = () => {
           backgroundColor: 'gray',
           effect: 'solid',
           delayHide: 150,
-          arrowColor:'transparent'
         }}       
+        arrowColor='transparent'
       />
     </div>
   )

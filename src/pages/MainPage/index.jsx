@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import axios from '../../api/axios'
 import { getVideoInfo } from '../../helpers/fetchingData';
+import VideoCard from '../../components/VideoCard';
 
 const MainPage = () => {
 
@@ -26,7 +27,19 @@ const MainPage = () => {
   }, [getMainVideos])
 
   return (
-    <div>MainPage</div>
+    <section className='mainGallery'>
+      {mainVideos.map(video => (
+        <VideoCard 
+          key={video.id.videoId}
+          id={video.id.videoId}
+          video={video}
+          img={video.snippet.thumbnails.medium.url}
+          info={video.snippet}
+          eInfo={video.extraInfo}
+          channelInfo={video.channelInfo}
+        />
+      ))}
+    </section>
   )
 }
 

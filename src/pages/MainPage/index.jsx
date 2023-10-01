@@ -4,16 +4,18 @@ import { getVideoInfo } from '../../helpers/fetchingData';
 
 const MainPage = () => {
 
-  const [mainVideos, setMainVideos] = useState([]);
+  const storedVideos = JSON.parse(localStorage.getItem('mainVideos'));
+  const [mainVideos, setMainVideos] = useState(storedVideos || []);
 
   const getMainVideos = useCallback(async () => {
     try {
-      const response = await axios.get(`/search?part=snippet&maxResults=10&q=beautiful%20place`)
-      let videosArray = response.data.items;
-      console.log('videosArray1', videosArray);
-
-      videosArray = await getVideoInfo(videosArray);
-      console.log('videosArray2', videosArray);
+      if (!storedVideos) {
+        const response = await axios.get(`/search?part=snippet&maxResults=10&q=beautiful%20place`)
+        let videosArray = response.data.items;
+        videosArray = await getVideoInfo(videosArray);
+        setMainVideos(videosArray);
+        localStorage.setItem('mainVideos', JSON.stringify(videosArray));
+      }
     } catch (error) {
       console.log(error);
     }

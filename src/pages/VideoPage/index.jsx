@@ -68,19 +68,19 @@ const VideoPage = () => {
           <span>
             {dayjs(snippet.publishedAt).fromNow()}
           </span>
-        </div>
-        <div className='comment_text'>
-          {snippet.textOriginal}
-        </div>
-        <div className='comment_buttons'>
-          <div>
-            <BiLike size={16} />
-            <span className='muted'>{snippet.likeCount}</span>
+          <div className='comment_text'>
+            {snippet.textOriginal}
           </div>
-          <div>
-            <BiDislike size={16} />
+          <div className='comment_buttons'>
+            <div>
+              <BiLike size={16} />
+              <span className='muted'>{snippet.likeCount}</span>
+            </div>
+            <div>
+              <BiDislike size={16} />
+            </div>
+            <span className='muted'>REPLY</span>
           </div>
-          <span className='muted'>REPLY</span>
         </div>
       </div>
     )
@@ -111,7 +111,7 @@ const VideoPage = () => {
       <div className='columns_container'>
         <div className='column column_1'>
           <div className='youtube_player_container'>
-            <YouTube className='youtube-player' videoId={videoId} onPlay={onPlayerReady} opts={opts} />
+            <YouTube className='youtube_player' videoId={videoId} onPlay={onPlayerReady} opts={opts} />
           </div>
           <div className='videoplayer_info'>
             {/* { videoaheaderMarkup } */}

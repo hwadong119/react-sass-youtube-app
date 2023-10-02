@@ -38,11 +38,11 @@ export const getVideoInfo = async (videosArr) => {
   }
 }
 
-export const getRelatedVideos = async (videoId) => {
+export const getRelatedVideos = async () => {
   try {
-    const response = await axios.get(`/search?part=snippet&maxResults=10&relatedToVideoId=${videoId}&type=video`)
+    const response = await axios.get(`/search?part=snippet&maxResults=10&type=video`)
     return response.data.items
   } catch (error) {
-    console.log(error);
+    console.log('get', error);
   }
 }

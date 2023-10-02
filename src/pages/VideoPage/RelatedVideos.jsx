@@ -7,7 +7,7 @@ const RelatedVideos = ({ currentVideo }) => {
   const [relatedVideos, setRelatedVideos] = useState([])
 
   const loadRelativeVideo = useCallback(async () => {
-    const relVideos = await getRelatedVideos(currentVideo);
+    const relVideos = await getRelatedVideos();
     const relVideosInfo = await getVideoInfo(relVideos);
     setRelatedVideos(relVideosInfo);
   }, [currentVideo])

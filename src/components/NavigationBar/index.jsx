@@ -8,7 +8,7 @@ import { MdKeyboardVoice } from 'react-icons/md'
 import { SearchContext } from '../../context/SearchContext'
 import useWindowSize from '../../helpers/useWindowSize'
 import { useNavigate } from 'react-router-dom'
-import axios from '../api/axios'
+import axios from '../../api/axios'
 
 const NavigationBar = () => {
 

@@ -18,7 +18,7 @@ const LeftNav = () => {
       </button>
 
       <div className='logo-container'>
-        <Link>
+        <Link to='/'>
           <img src={imgUrl} />
         </Link>
       </div>
